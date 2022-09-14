@@ -1,0 +1,59 @@
+<div class="table-responsive">            
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row mt-5">
+        
+                </div>
+                
+            </div>
+            <div class="row mt-5">
+                <div class="col-sm-8"><h2>Reservation <b>Details</b></h2></div>
+                <div class="col-sm-4">
+                  
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                 
+                    <th>Name<i class="fa fa-sort"></i></th>
+                    <th>Persone</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Note</th>
+                    <th>Etat</th>
+                    <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cot of listr">
+                   
+                    <td>{{cot?.name}}</td>
+                    <td>{{cot?.persone}}</td>
+                    <td>{{cot?.phone}}</td>
+                    <td>{{cot?.email}}</td>
+                    <td>{{cot?.date}}</td>
+                    <td>{{cot?.time}}</td>
+                    <td>{{cot?.notes}}</td>
+                    <td>{{!cot?.etat ? 'waiting': cot?.etat }}</td>
+                    
+                    <td>
+                        <!-- Button trigger modal -->
+
+                      
+                        <button (click)="Confirm(cot,'accepted')" class="btn btn-success"><i class="fa fa-check"></i></button>
+                        <button (click)="Confirm(cot,'refused')"  class="btn btn-success"><i class="fa fa-times"></i></button>
+                        <button (click)="Delete(cot?._id)"  class="btn btn-success"><i class="fa fa-trash-o"></i></button>
+                    </td>
+                </tr>       
+            </tbody>
+        </table>
+        
+ 
+        
+    </div>
+

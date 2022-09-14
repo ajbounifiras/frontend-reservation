@@ -1,0 +1,49 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col-2">
+        <nav style="height:100%;background-color: #f9f9f9;">
+        <ul style="height:100%;">
+        <li class ="nav-item">
+        <a class ="nav-link" routerLink="/admin"> Categorie </a>
+        </li>
+        <li class ="nav-item">
+        <a class ="nav-link" routerLink="produit1"> Produit </a>
+        </li>
+        <li class ="nav-item">
+        <a class ="nav-link" routerLink="contact1"> Contact </a>
+        </li>
+        <li class ="nav-item">
+        <a class ="nav-link" routerLink="commande1"> Commande </a>
+        </li>
+        <li class ="nav-item">
+        <a class ="nav-link" routerLink="reservation1"> Reservation </a>
+        </li>
+        <li class ="nav-item">
+            <a class ="nav-link" routerLink="user">User </a>
+            </li>
+        </ul>
+        </nav>
+    </div>
+    <div class="col-10 mt-5">
+        <router-outlet></router-outlet>       
+    </div> 
+</div>
+
+ 
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>

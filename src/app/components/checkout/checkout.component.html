@@ -1,0 +1,128 @@
+<div class="subheader dark-overlay dark-overlay-2" style="background-image: url('assets/img/subheader.jpg')">
+    <div class="container">
+      <div class="subheader-inner">
+        <h1>Checkout</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+          </ol>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+  <!-- Subheader End -->
+
+  <!-- Checkout Start -->
+  <section class="section">
+    <div class="container">
+
+      <form method="post">
+        <div class="row">
+          <div class="col-xl-7">
+
+            <!-- Buyer Info -->
+            <h4>Billing Details</h4>
+            <div class="row">
+              <div class="form-group col-xl-6">
+                <label>First Name <span class="text-danger"></span></label>
+                <input type="text" placeholder="First Name" name="firstName" class="form-control" value="" required="" [(ngModel)]="checkout.firstName">
+              </div>
+              <div class="form-group col-xl-6">
+                <label>Last Name <span class="text-danger"></span></label>
+                <input type="text" placeholder="lastName" name="lastName" class="form-control" value="" required="" [(ngModel)]="checkout.lastName">
+              </div>
+            
+          
+              <div class="form-group col-xl-6">
+                <label>Street Address  <span class="text-danger"></span></label>
+                <input type="text" placeholder="Street Address One" name="streetAddress" class="form-control" value="" required="" [(ngModel)]="checkout.streetAddress">
+              </div>
+              <div class="form-group col-xl-12">
+                <label>Town / City <span class="text-danger"></span></label>
+                <input type="text" placeholder="Town/City" name="City" class="form-control" value="" required="" [(ngModel)]="checkout.City">
+              </div>
+              <div class="form-group col-xl-6">
+                <label>Phone Number <span class="text-danger"></span></label>
+                <input type="text" placeholder="Phone Number" name="phoneNumber" class="form-control" value="" required="" [(ngModel)]="checkout.phoneNumber">
+              </div>
+              <div class="form-group col-xl-6">
+                <label>Email Address <span class="text-danger"></span></label>
+                <input type="email" placeholder="Email Address" name="email" class="form-control" value="" required="" [(ngModel)]="checkout.email">
+              </div>
+              <div class="form-group col-xl-12 mb-0">
+                <label>Order Notes</label>
+                <textarea name="note" rows="5" class="form-control" placeholder="Order Notes (Optional)" [(ngModel)]="checkout.note"></textarea>
+              </div>
+            </div>
+
+            <!-- /Buyer Info -->
+
+          </div>
+          <div class="col-xl-5 checkout-billing">
+            <!-- Order Details Start -->
+            <table class="ct-responsive-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Qunantity</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let p of panier">
+                  <td data-title="Product">
+                    <div class="cart-product-wrapper">
+                      <div class="cart-product-body">
+                        <h4> {{p.name}}</h4>
+                        <p>{{p.description}}</p>
+                        
+                      </div>
+                    </div>
+                  </td>
+                  <td data-title="Quantity">{{p.quantity}}</td>
+                  <td data-title="Total"> <strong>{{p.price}}$</strong> </td>
+                </tr>
+                
+                
+                <tr class="total">
+                  <td>
+                    <h6 class="mb-0">Grand Total</h6>
+                  </td>
+                  <td></td>
+                  <td> <strong>{{totalPrice}}</strong> </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="form-group">
+              <label>Card Number</label>
+              <input type="text" class="form-control" name="cardNumber" placeholder="Card Number" value="" [(ngModel)]="checkout.cardNumber">
+            </div>
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" class="form-control" name="fullName" placeholder="Full Name" value="" [(ngModel)]="checkout.fullName">
+            </div>
+            <div class="row">
+              <div class="col-xl-6 form-group">
+                <label>Expiry Date</label>
+                <input type="text" class="form-control" name="expiryDate" placeholder="Expiry Date (MM/YY)" value="" [(ngModel)]="checkout.expiryDate">
+              </div>
+              <div class="col-xl-6 form-group">
+                <label>CVV*</label>
+                <input type="number" class="form-control" name="cvv" placeholder="CVV" value="" [(ngModel)]="checkout.cvv">
+              </div>
+            </div>
+
+            <p class="small">Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a class="btn-link" href="#">privacy policy.</a> </p>
+            <button type="submit" class="btn-custom primary btn-block" (click)="save()">Place Order</button>
+
+            <!-- Order Details End -->
+
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </section>

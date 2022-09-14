@@ -1,0 +1,136 @@
+<div class="subheader dark-overlay dark-overlay-2" style="background-image: url('assets/img/subheader-reservation.jpg')">
+    <div class="container">
+      <div class="subheader-inner">
+        <h1>Reservation</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="">Home</a></li>
+            <li class="breadcrumb-item"><a routerLink="reservation">Reservation</a></li>
+         
+          </ol>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+
+<section class="inner-page-content reservation-page reservation mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 footer-content-right">
+                <div class="open-hours-wrap">
+                    <div class="oh-title">OPEN HOURS</div>
+                    <div class="oh-day">
+                        <div class="ohd-day">Monday</div>
+                        <div class="ohd-time">8AM - 9PM</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="oh-day">
+                        <div class="ohd-day">Tuesday</div>
+                        <div class="ohd-time">8AM - 9PM</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="oh-day">
+                        <div class="ohd-day">Wednesday</div>
+                        <div class="ohd-time">8AM - 9PM</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="oh-day">
+                        <div class="ohd-day">Thursday</div>
+                        <div class="ohd-time">8AM - 9PM</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="oh-day">
+                        <div class="ohd-day">Friday</div>
+                        <div class="ohd-time">8AM - 9PM</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="oh-day">
+                        <div class="ohd-day">Saturday</div>
+                        <div class="ohd-time">8AM - 9PM</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="oh-day">
+                        <div class="ohd-day">Sunday</div>
+                        <div class="ohd-time">Close</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="reserphone">
+                         Reservations by phone<br>
+                         Call <span class="text-theme">&nbsp;&nbsp;(+62)-274-654321</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 ">
+                <div class="well-block">
+                    <div class="well-title">
+                        <div class="heading-section">
+                            <div class="heading-title">Make a Reservation</div>
+                            <div class="heading-text">Please fill this form to make your reservation</div>
+                        </div>
+                    </div>
+                    <div class="form-reservation">
+                        <form>
+                            <!-- Form start -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="name">Name</label>
+                                        <input id="name" name="name" type="text" placeholder="Name" [(ngModel)]="res.name" class="form-control input-md"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="name">Persons</label>
+                                        <select id="persons" name="persons" class="form-control" [(ngModel)]="res.persone">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="phone">Phone</label>
+                                        <input id="phone" name="phone" placeholder="Phone" [(ngModel)]="res.phone" class="form-control input-md" required="" type="text"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="email">Email</label>
+                                        <input id="email" name="email" type="text" placeholder="E-Mail" [(ngModel)]="res.email" class="form-control input-md"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+
+                                        <label class="control-label" for="datepicker">Preferred Date</label>
+                                        <input id="datepicker"  type="text" class="form-control input-md" name="date" [(ngModel)]="res.date"></div>
+                                        
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="timepicker3">Preferred Time</label>
+                                        <input id="timepicker3" type="text" class="form-control input-md" name="time" [(ngModel)]="res.time"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="comments">Notes</label>
+                                        <textarea class="form-control" id="comments" name="notes" [(ngModel)]="res.notes"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group btn-booknow">
+                                        <button id="singlebutton" name="singlebutton" class="rounded-button fadetransition" (click)="save()">Book Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- form end --></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>

@@ -1,0 +1,48 @@
+<div class="table-responsive">            
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row mt-5">
+        
+                </div>
+                
+            </div>
+            <div class="row mt-5">
+                <div class="col-sm-8"><h2>Contact <b>Details</b></h2></div>
+                <div class="col-sm-4">
+                  
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>FirstName <i class="fa fa-sort"></i></th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cot of listeCot">
+                    <td>{{cot?._id}}</td>
+                    <td>{{cot?.firstName}}</td>
+                    <td>{{cot?.lastName}}</td>
+                    <td>{{cot?.email}}</td>
+                    <td>{{cot?.subject}}</td>
+                    <td>{{cot?.message}}</td>
+                    <td>
+                        <!-- Button trigger modal -->
+
+                      
+                        <a (click)="deleteById(cot?._id)" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                    </td>
+                </tr>       
+            </tbody>
+        </table>
+        
+ 
+        
+    </div>

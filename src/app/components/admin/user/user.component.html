@@ -1,0 +1,83 @@
+<div class="table-responsive">            
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row mt-5">
+                <div class="col-sm-8"><h2>Add<b>User</b></h2>
+                    <form>
+                        <input  name="_id" class="form-control input-md" [(ngModel)]="us._id" type="hidden">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="name">userName</label>
+                                <input id="userName" name="userName" placeholder="userName" class="form-control input-md" [(ngModel)]="us.userName" required="" type="text"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="email">Email</label>
+                                <input id="email" name="email" placeholder="email" [(ngModel)]="us.email" class="form-control input-md" required="" type="email"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="password">Password</label>
+                                <input id="password" name="password" placeholder="password" [(ngModel)]="us.password" class="form-control input-md" required="" type="password"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="password">Role</label>
+                                <select name="role" [(ngModel)]="us.role" >
+                                    <option value="user">user</option>
+                                    <option value="admin">admin</option>
+                                </select>
+                            </div>
+                        </div> 
+                        <div class="col-md-12">
+                            <div class="form-group btn-booknow">
+                                <button  name="add" class="rounded-button fadetransition"  (click)="add()">add</button>
+                                <button  name="reset" class="rounded-button fadetransition" (click)="reset()">clear</button>
+                            </div>
+                          
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            <!--div class="row mt-5">
+                <div class="col-sm-8"><h2>Categorie <b>Details</b></h2></div>
+                <div class="col-sm-4">
+                    <div class="search-box d-flex">
+                        <i class="material-icons">&#xE8B6;</i>
+                        <input type="text" (change)="filter($event)" class="form-control" placeholder="Search&hellip;">
+                    </div>
+                </div>
+            </div-->
+        </div>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>UserName <i class="fa fa-sort"></i></th>
+                    <th>Email</th>
+                    <th>Password</th>
+                   <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cat of listeus">
+                    <td>{{cat?._id}}</td>
+                    <td>{{cat?.userName}}</td>
+                    <td>{{cat?.email}}</td>
+                    <td>{{cat?.password}}</td>
+                    <td>
+                        <!-- Button trigger modal -->
+
+                        <a  (click)="getById(cat._id)" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                        <a (click)="deleteById(cat._id)" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                    </td>
+                </tr>       
+            </tbody>
+        </table>
+        
+ 
+        
+    </div>
+</div>

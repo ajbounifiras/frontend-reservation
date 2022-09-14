@@ -1,0 +1,87 @@
+<br>
+<br>
+<br>
+<div class="contact-wrapper mt-5"> 
+
+    <<!--div class="ct-contact-map-wrapper">
+      <div id="contactPageMap" class="ct-contact-map"></div>
+      <a href="https://maps.google.com/?q=51.5,-0.09" target="_blank" class="btn-custom shadow-none">View in Google Maps</a>
+     
+    </div-->
+    <div id="map">
+      <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="330px" frameborder="0" style="border:0;height:100%;" allowfullscreen></iframe>
+    </div>
+
+
+    <div class=" mt-5">
+      <div class="section section-padding">
+        <div class="container">
+
+          <div class="contact-info">
+
+            <div class="row">
+              <div class="col-xl-6">
+                <div class="ct-info-box">
+                  <i class="flaticon-location"></i>
+                  <h5>Find Us</h5>
+                  <span>445 Mount Eden Road, Mount Eden</span>
+                  <span>21 Greens Road RD 2 Ruawai 0592</span>
+                  <span> +123 456 789 </span>
+                  <span> info@example.com </span>
+                </div>
+              </div>
+              <div class="col-xl-6">
+                <div class="ct-info-box">
+                  <i class="flaticon-online-booking"></i>
+                  <h5>Opening Hours</h5>
+                  <span><span>Mon - Wed:</span> 8:00am - 8:00pm</span>
+                  <span><span>Thu:</span> 8:00am - 5:00pm</span>
+                  <span><span>Fri:</span> 8:00am - 8:00pm</span>
+                  <span><span>Sat - Sun:</span> 8:00am - 2:00pm</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="section pt-0">
+        <div class="container">
+   
+          <div class="section-title-wrap">
+            <h2 class="title">Send us a Message </h2>
+            <div *ngIf="show" class="alert alert-success" role="alert">Success alert</div>
+            <p class="subtitle">
+            
+            </p>
+          </div>
+
+          <form method="post">
+            <div class="row">
+              <div class="form-group col-lg-6">
+                <input type="text" placeholder="First Name" class="form-control" [(ngModel)]="contact.firstName" name="firstName" value="">
+              </div>
+              <div class="form-group col-lg-6">
+                <input type="text" placeholder="Last Name" class="form-control" [(ngModel)]="contact.lastName" name="lastName" value="">
+              </div>
+              <div class="form-group col-lg-12">
+                <input type="email" placeholder="Email Address" class="form-control" [(ngModel)]="contact.email"name="email" value="">
+              </div>
+              <div class="form-group col-lg-12">
+                <input type="text" placeholder="Subject" class="form-control" [(ngModel)]="contact.subject"name="subject" value="">
+              </div>
+              <div class="form-group col-lg-12">
+                <textarea name="message" class="form-control" placeholder="Type your message" [(ngModel)]="contact.message"rows="8"></textarea>
+              </div>
+            </div>
+            <button type="submit" (click)="save()"class="btn-custom primary" name="button">Send Message</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>

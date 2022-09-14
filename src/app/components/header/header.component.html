@@ -1,0 +1,209 @@
+<div class="cart-sidebar-wrapper">
+  <aside class="cart-sidebar">
+    <div class="cart-sidebar-header">
+      <h3>Your Cart</h3>
+      <div class="close-btn cart-trigger close-dark">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="cart-sidebar-body">
+      <div class="cart-sidebar-scroll">
+        <div class="cart-sidebar-item" *ngFor="let p of panier">
+          <div class="media">
+            <a href="menu-item-v1.html"><img src="http://localhost:3000/uploads/{{p.image}}" alt="product"></a>
+            <div class="media-body">
+              <h5> <a href="menu-item-v1.html" title="Pepperoni">{{p.name}}</a> </h5>
+              <span>{{p.quantity}}x {{p.price}}$</span>
+            </div>
+          </div>
+          <div class="cart-sidebar-item-meta">
+            <span>{{p.description}}</span>
+          </div>
+          <div class="cart-sidebar-price">
+            {{p.quantity * p.price}}$
+          </div>
+          <div class="close-btn" (click)="deleteFromPanier(p)">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-sidebar-footer">
+      <h4>Total: <span>{{totalPrice}}$</span> </h4>
+      <a routerLink="/checkout" class="btn-custom">Checkout</a>
+    </div>
+  </aside>
+  <div class="cart-sidebar-overlay cart-trigger">
+  </div>
+</div>
+<div class="search-form-wrapper">
+  <div class="search-trigger close-btn">
+    <span></span>
+    <span></span>
+  </div>
+  <form class="search-form" method="post">
+    <input type="text" placeholder="Search..." value="">
+    <button type="submit" class="search-btn">
+      <i class="flaticon-magnifying-glass"></i>
+    </button>
+  </form>
+</div>
+<header class="main-header header-1 header-absolute bg-light">
+
+    <div class="top-header">
+      <div class="container">
+        <div class="top-header-inner">
+
+          <div class="top-header-contacts">
+            <ul class="top-header-nav">
+              <li> <a class="p-0" href="tel:+123456789"><i class="fas fa-phone mr-2"></i> +123 456 789</a> </li>
+            </ul>
+          </div>
+
+       
+          <ul class="top-header-nav header-cta">
+            <li *ngIf="loginIn==false"> <a routerLink="login">Login</a> </li>
+            <li *ngIf="loginIn==false"> <a routerLink="register">Register</a> </li>
+            <li *ngIf="loginIn==true"> <a routerLink="menu">Order Online</a> </li>
+            <li *ngIf="loginIn==true"> <a (click)="logout()">Logout</a> </li>
+             <li *ngIf="loginIn==true"><a routerLink="profile">profile</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <nav class="navbar">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html"> <img src="assets/img/logo.png" alt="logo"> </a>
+        <!-- Menu -->
+        <ul class="navbar-nav">
+          <li class="menu-item">
+            <a routerLink="">Home</a>
+            
+          </li>
+          <li class="menu-item">
+            <a routerLink="event">Event</a>
+          
+          </li>
+          <li class="menu-item">
+            <a routerLink="about">About</a>
+          </li>
+          <li class="menu-item menu-item-has-children mega-menu-wrapper">
+            <a >Menu</a>
+            <ul class="submenu">
+              <li>
+                <div class="container">
+                  <div class="row">
+
+                    <div class="col-lg-4">
+                      <div class="mega-menu-item">
+                        <h5>Building a Pizza</h5>
+                        <p>
+                          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+                          making it over 2000 years old.
+                        </p>
+                    
+                      </div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-3">
+                      <div class="mega-menu-item">
+                        <h5>Menu</h5>
+                        <a routerLink="menu">Menu v1</a>
+                        
+                        
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="mega-menu-item">
+                        <h5>Menu Item Pages</h5>
+                        <a routerLink="produit" class="btn-custom secondary shadow-none btn-sm">Build your Pizza</a>
+                       
+                      </div>
+                    </div>
+                    <div class="col-12 mega-menu-promotion-wrapper">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="mega-menu-promotion">
+                            <a routerLink="produit"><img src="assets/img/prods-sm/1.png" alt="pizza"></a>
+                            <div class="mega-menu-promotion-text">
+                              <h4><a routerLink="produit">Pepperoni</a></h4>
+                              <span>$12.99</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="mega-menu-promotion">
+                            <a routerLink="produit"><img src="assets/img/prods-sm/2.png" alt="pizza"></a>
+                            <div class="mega-menu-promotion-text">
+                              <h4><a routerLink="produit">Vegetarian</a></h4>
+                              <span>$9.99</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="mega-menu-promotion">
+                            <a routerLink="produit"><img src="assets/img/prods-sm/3.png" alt="pizza"></a>
+                            <div class="mega-menu-promotion-text">
+                              <h4><a routerLink="produit">Ham & Cheese</a></h4>
+                              <span>$13.99</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="mega-menu-promotion">
+                            <a routerLink="produit"><img src="assets/img/prods-sm/4.png" alt="pizza"></a>
+                            <div class="mega-menu-promotion-text">
+                              <h4><a routerLink="produit">Specialty</a></h4>
+                              <span>$13.99</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a routerLink="location">Locations</a>
+          </li>
+          <li class="menu-item">
+            <a routerLink="contact">Contact Us</a>
+          </li>
+          <li class="menu-item">
+            <a routerLink="reservation">Reservation</a>
+          </li>
+          <li class="menu-item">
+            <a *ngIf="userData?.role==='admin'" routerLink="admin">Admin</a>
+          </li>
+          
+        </ul>
+
+        <div class="header-controls">
+          <ul class="header-controls-inner" *ngIf="userData?.role!='admin'">
+            <li class="cart-dropdown-wrapper cart-trigger" (click)="getPanier()">
+              <span class="cart-item-count">0</span>
+              <i class="flaticon-shopping-bag"></i>
+            </li>
+            <li class="search-dropdown-wrapper search-trigger">
+              <i class="flaticon-search"></i>
+            </li>
+          </ul>
+          <!-- Toggler -->
+          <div class="aside-toggler aside-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+
+  </header>

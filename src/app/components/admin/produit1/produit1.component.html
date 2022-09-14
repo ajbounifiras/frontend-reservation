@@ -1,0 +1,92 @@
+<div class="table-responsive">            
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row mt-5">
+                <div class="col-sm-8"><h2>product<b>Add</b></h2>
+                    <form>
+                        <input id="id" name="_id" class="form-control input-md" [(ngModel)]="pro._id" type="hidden">
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="name">Name</label>
+                                <input id="name" name="name" placeholder="Name" class="form-control input-md" [(ngModel)]="pro.name" required="" type="text"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="description">Description</label>
+                                <input id="description" name="description" placeholder="Description" [(ngModel)]="pro.description" class="form-control input-md" required="" type="text"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="price">price</label>
+                                <input id="price" name="price" placeholder="price" [(ngModel)]="pro.price" class="form-control input-md" required="" type="text"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label" for="categorieId">Categorie</label>
+                            <select name="categorieId" [(ngModel)]="pro.categorieId" (ngModelChange)="selectChange($event)"  class="form-control input-md">
+                                <option *ngFor="let c of listcat" [ngValue]="c._id">{{c.name}}</option>
+                              </select>
+                            </div>  
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                              <input
+                              type="file"
+                              name="image"
+                              ng2FileSelect
+                              [uploader]="uploader"
+                              accept="image/x-png,image/gif,image/jpeg"
+                            />
+                            </div>
+                          </div>
+                        <div class="col-md-12">
+                            <div class="form-group btn-booknow">
+                                <button  name="add" class="rounded-button fadetransition" (click)="add()">add</button>
+                                <button  name="reset" class="rounded-button fadetransition" (click)="reset()">clear</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            <div class="row mt-5">
+                <div class="col-sm-8"><h2>Product <b>Details</b></h2></div>
+                <div class="col-sm-4">
+                    <div class="search-box d-flex">
+                        <i class="material-icons">&#xE8B6;</i>
+                        <input type="text" (change)="filter($event)" class="form-control" placeholder="Search&hellip;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name <i class="fa fa-sort"></i></th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pro of listpro">
+                    <td>{{pro?._id}}</td>
+                    <td>{{pro?.name}}</td>
+                    <td>{{pro?.description}}</td>
+                    <td>{{pro?.price}}</td>
+                    <td>
+                        <!-- Button trigger modal -->
+
+                        <a  (click)="getById(pro?._id)" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                        <a (click)="deleteById(pro?._id)" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                    </td>
+                </tr>       
+            </tbody>
+        </table>
+        
+ 
+        
+    </div>
+</div>

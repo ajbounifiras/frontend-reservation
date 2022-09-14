@@ -1,0 +1,277 @@
+section.reservation {
+    padding: 100px 0px;
+    background-size: 100% auto;
+    background-position: 0 -250px;
+    background-repeat: no-repeat;
+  }
+  
+  section.reservation .form-reservation {
+    padding: 40px 0px 0px;
+  }
+  
+  section.reservation .form-group.btn-booknow {
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  section.reservation textarea.form-control {
+    height: 100px;
+    resize: none;
+  }
+  
+  section.inner-page-content.reservation-page {
+    padding: 130px 0px 130px;
+  }
+  
+  section.reservation {
+    background-size: 100% auto;
+    background-position: center center;
+  }
+  
+  a {
+    color: #ffc700;
+    cursor: pointer;
+  }
+  
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+    color: #090909;
+  }
+  
+  a.btn-style {
+    background: #929292;
+    color: #ffffff;
+    padding: 2px 8px;
+    font-size: 12px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+  a.btn-style:hover {
+    background: #000000;
+  }
+  
+  .animated {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-delay: 500ms;
+    animation-delay: 500ms;
+  }
+  
+  .animate-out {
+    -webkit-animation-delay: 0ms;
+    animation-delay: 0ms;
+  }
+  
+  .text-theme {
+    color: #ffc700;
+  }
+  
+  .clear {
+    clear: both;
+    height: 0px;
+  }
+  
+  .line {
+    width: 100px;
+    height: 4px;
+    margin: 20px auto;
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+  .outline-btn {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    border-radius: 90px;
+    padding: 5px 30px;
+    display: inline-block;
+  }
+  
+  .outline-btn:hover {
+    text-decoration: none;
+    color: #513f00;
+    cursor: pointer;
+    background: #ffc700;
+    border: 1px solid #ffc700;
+  }
+  
+  .rounded-button {
+    background: #ffc700;
+    color: #513f00;
+    display: inline-block;
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    border-radius: 90px;
+    padding: 10px 30px;
+    border: 0px solid #ffffff;
+    font-weight: 600;
+  }
+  
+  .rounded-button:hover,
+  .rounded-button:active {
+    background: #090909;
+    cursor: pointer;
+    color: #ffffff;
+    -webkit-box-shadow: 3px 3px 9px 0px rgba(50, 50, 50, 0.29);
+    -moz-box-shadow: 3px 3px 9px 0px rgba(50, 50, 50, 0.29);
+    box-shadow: 3px 3px 9px 0px rgba(50, 50, 50, 0.29);
+  }
+  
+  .fadetransition {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .heading-section {
+    margin: 0px 0px 0px;
+  }
+  
+  .heading-title {
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Gabriela", serif;
+  }
+  
+  .heading-text {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .parallax-stellar {
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .owl-dots {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .owl-dots .owl-dot {
+    display: inline-block;
+    margin: 0px 6px 0px 0px;
+    height: 10px;
+    width: 10px;
+    border: 1px solid #ffffff;
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    border-radius: 90px;
+  }
+  
+  .owl-dots .owl-dot.active {
+    width: 20px;
+    background: #ffffff;
+  }
+  
+  ul.list-ul {
+    padding: 0px 0px;
+  }
+  
+  ul.list-ul li {
+    list-style: none;
+  }
+  
+  body .form-control {
+    -webkit-box-shadow: inset 0px 0px 0px 0px transparent;
+    -moz-box-shadow: inset 0px 0px 0px 0px transparent;
+    box-shadow: inset 0px 0px 0px 0px transparent;
+  }
+  
+  body .form-control:hover,
+  body .form-control:focus {
+    -webkit-box-shadow: 0px 0px 0px 0px transparent;
+    -moz-box-shadow: 0px 0px 0px 0px transparent;
+    box-shadow: 0px 0px 0px 0px transparent;
+  }
+  
+  body .form-control:focus,
+  body .form-control:active {
+    border: 1px solid #ffc700;
+  }
+  
+  body label {
+    font-weight: 500;
+  }
+  
+  .to-right {
+    float: right;
+  }
+  
+  .to-left {
+    float: left;
+  }
+  
+  .os-animation,
+  .staggered-animation {
+    opacity: 0;
+  }
+  
+  .os-animation.animated,
+  .staggered-animation.animated {
+    opacity: 1;
+  }
+  .open-hours-wrap {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ffc700;
+    overflow: hidden;
+  }
+  .open-hours-wrap .oh-title {
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: "Gabriela", serif;
+  }
+  
+  .open-hours-wrap .oh-day {
+    padding: 0px 25px;
+  }
+  .open-hours-wrap .oh-day .ohd-day {
+    color: #ffc700;
+    float: left;
+    width: 50%;
+  }
+  
+  .open-hours-wrap .oh-day .ohd-time {
+    float: left;
+    width: 50%;
+    text-align: center;
+  }
+  .clear {
+    clear: both;
+    height: 0px;
+  }
+  .open-hours-wrap .reserphone {
+    padding: 20px;
+    margin: 30px 0px 0px;
+    text-align: center;
+    border-top: 1px solid #333333;
+  }
+  .text-theme {
+    color: #ffc700;
+  }
+  .footer-content-right {
+    width: 300px;
+    color: #ffffff;
+    height: 460px;
+    padding: 15px;
+    background: #171717;
+  }
+  
