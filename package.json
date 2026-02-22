@@ -9,8 +9,8 @@
     "test": "ng test"
   },
   "private": true,
-  "engines": {
-  "node": "16.x"
+"engines": {
+  "node": "18.x"
 },
   "dependencies": {
     "@angular/animations": "^13.0.3",
