@@ -1,0 +1,5 @@
+{
+  "buildCommand": "npx @angular/cli@13 build --configuration production",
+  "outputDirectory": "dist/frontend-reservation",
+  "framework": null
+}
