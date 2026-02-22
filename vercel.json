@@ -1,5 +1,10 @@
 {
-  "buildCommand": "npx @angular/cli@13 build --configuration production",
+  "buildCommand": "npm install --legacy-peer-deps && ng build --configuration production",
   "outputDirectory": "dist/frontend-reservation",
-  "framework": null
+  "framework": null,
+  "build": {
+    "env": {
+      "NODE_VERSION": "16"
+    }
+  }
 }
